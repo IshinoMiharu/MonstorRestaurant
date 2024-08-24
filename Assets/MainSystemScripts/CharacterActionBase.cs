@@ -7,13 +7,17 @@ public abstract class CharacterActionBase : MonoBehaviour
 {
     Rigidbody2D _rigidbody2D;
 
-    [SerializeField]
-    float _moveSpeed = 5;
+    [HideInInspector]
+    public float _moveSpeed = 5;
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _rigidbody2D.gravityScale = 0;
+        Initialize();
     }
+
+    public virtual void Initialize() { }
+
 
     public void Moving(Vector2 axis)
     {
