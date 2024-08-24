@@ -26,7 +26,7 @@ public abstract class CharacterStatusBase : MonoBehaviour
         }
         else
         {
-            Debug.LogError("アクション系コンポーネントがアタッチされていません");
+            Debug.Log($"{gameObject.name}にアクション系コンポーネントがアタッチされていません");
         }
         Initialize();
     }
