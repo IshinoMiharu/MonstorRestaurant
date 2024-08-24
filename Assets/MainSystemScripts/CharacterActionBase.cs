@@ -1,4 +1,6 @@
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class CharacterActionBase : MonoBehaviour

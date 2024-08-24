@@ -1,12 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAction : CharacterActionBase
 {
-    void Update()
+    public void GetInputMove(InputAction.CallbackContext context)
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float Vertical = Input.GetAxisRaw("Vertical");
-
-        Moving(new Vector2(horizontal, Vertical));
+        Vector2 axis = context.ReadValue<Vector2>();
+        Moving(axis);
     }
 }
